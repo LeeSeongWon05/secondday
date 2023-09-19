@@ -1,29 +1,31 @@
 @import 'reset.scss';
+@import 'variable.scss';
+
+// 1rem -> 16px ( root element )
 
 body {
 	background: hotpink;
 
 	section {
 		width: 600px;
-		padding: 50px;
+		padding: 3rem;
 		background: #fff;
-		margin: 100px auto;
+		margin: 6rem auto;
 		text-align: center;
 
 		h1 {
-			font: bold 50px/1 'arial';
+			font: bold 4rem/1 'arial';
 			color: hotpink;
-			margin-bottom: 40px;
+			margin-bottom: 3rem;
 		}
 		p {
-			margin-bottom: 30px;
+			margin-bottom: 2rem;
 		}
 		a {
 			display: inline-block;
-			border: 1px solid red;
-			padding: 8px 30px;
-			background: hotpink;
-			font: bold 14px/1 'arial';
+			padding: 0.5rem 2rem;
+			background: var(--color1);
+			font: bold 1rem/1 'arial';
 			color: #fff;
 		}
 	}
@@ -44,16 +46,19 @@ body {
 	}
 }
 
+// 데스크탑 레이아웃을 모바일 버전으로 반응형 처리할때 주의점
+// 모바일 디바이스는 폭이 워낙 다양하기 떄문에 폭을 무조건 퍼센트 처리
 @media screen and (max-width: 599px) {
 	body {
-		background: orange;
+		background: var(--color3);
 
 		section {
+			width: 80%;
 			h1 {
-				color: orange;
+				color: var(--color3);
 			}
 			a {
-				background: orange;
+				background: var(--color3);
 			}
 		}
 	}
